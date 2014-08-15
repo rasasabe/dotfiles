@@ -1,0 +1,2 @@
+" キーコードはすぐにタイムアウト、マッピングはタイムアウトしない。"O"を多用するので。
+set notimeout ttimeout ttimeoutlen=200
