@@ -1,0 +1,6 @@
+set -o vi
+
+alias dir='ls -lF'
+alias ls='ls -F'
+
+alias ssh-ignorekey='ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no'
