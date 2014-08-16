@@ -10,5 +10,24 @@ set notimeout ttimeout ttimeoutlen=200
 set nobackup
 set noswapfile
 
+" いったんフィある形式の判別を停止する。
+filetype off
+
+" NeoBundleを導入。
+if has('vim_starting')
+	set runtimepath+=~/local/vim/bundle/neobundle.vim/
+	call neobundle#rc(expand('~/local/vim/bundle/'))
+endif
+
+call neobundle#begin(expand('~/local/vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" NeoBundleで管理されいてるPluginを列挙。
+
+call neobundle#end()
+
 " ファイル形式の判別を有効にする。
 filetype plugin indent on
+
+" 未導入のプラグインをチェックする。
+NeoBundleCheck
