@@ -23,6 +23,7 @@ call neobundle#begin(expand('~/local/vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " NeoBundleで管理されいてるPluginを列挙。
+NeoBundle 'Shougo/unite.vim'
 
 call neobundle#end()
 
