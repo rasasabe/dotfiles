@@ -1,2 +1,14 @@
+" Encoding {{{
+set encoding=utf-8
+scriptencoding utf-8
+" }}}
+
 " キーコードはすぐにタイムアウト、マッピングはタイムアウトしない。"O"を多用するので。
 set notimeout ttimeout ttimeoutlen=200
+
+" バックアップもスワップも作成しない。
+set nobackup
+set noswapfile
+
+" ファイル形式の判別を有効にする。
+filetype plugin indent on
