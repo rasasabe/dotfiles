@@ -10,6 +10,10 @@ set notimeout ttimeout ttimeoutlen=200
 set nobackup
 set noswapfile
 
+" インデント関連
+set tabstop 4
+set autoindent
+
 " いったんフィある形式の判別を停止する。
 filetype off
 
@@ -33,8 +37,6 @@ filetype plugin indent on
 
 " 未導入のプラグインをチェックする。
 NeoBundleCheck
-
-:set paste
 
 " 引数なしで起動された場合はNERDTreeを表示する。
 let file_name = expand("%:p")
