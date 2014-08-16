@@ -11,7 +11,7 @@ set nobackup
 set noswapfile
 
 " インデント関連
-set tabstop 4
+set tabstop=4
 set autoindent
 
 " いったんフィある形式の判別を停止する。
