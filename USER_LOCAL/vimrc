@@ -61,6 +61,6 @@ nnoremap <F8> :<C-u>source $MYVIMRC<CR>
 
 " Unite呼出用のキーマップ
 nnoremap [unite] <Nop>
-nmap <Space>e [unite]
+nmap <Space>s [unite]
 nnoremap [unite]b :<C-u>Unite buffer<CR>
 nnoremap [unite]f :<C-u>Unite file<CR>
