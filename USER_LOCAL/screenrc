@@ -17,42 +17,7 @@ bind b focus bottom
 # screen's message color
 sorendition "= bW"
 
-# Caption for each window (if split)
-setenv a ""
-setenv a "$a%?%F"     # if the window has the focus
-setenv a "$a%{=d Wk}" #   set attribute = {dim, black(k) on bright Write(W)}
-setenv a "$a%:"       # else
-setenv a "$a%{=d Kk}" #   set attribute = {dim, black(k) on bright Black(K)}
-setenv a "$a%?"       # end if
-setenv a "$a%?%P"     # if copy/paste mode
-setenv a "$a%{=d Bk}" #   set attribute = {dim, black(k) on bright Blue(B)}
-setenv a "$a%?"       # end if
-setenv a "$a%n"       # window number
-setenv a "$a "        # space
-setenv a "$a%L="      # Mark the position for the next truncation
-setenv a "$a%h"       # window' hardstatus
-setenv a "$a%L>"      # Truncate %L= ~ %L>, 'L' for > gives marks at the truncation point
-setenv a "$a%="       # With the last %-0=, it makes right alignment for following lines
-setenv a "$a%?%P"     # if copy/paste mode
-#setenv a "$a  *copy/paste*" # draw this sentence
-setenv a "$a%?"       # end if
-setenv a "$a%?%E"     # if copy/paste mode
-#setenv a "$a  ***command**" # draw this sentence
-setenv a "$a%?"       # end if
-setenv a "$a%-0="     # pad the string to the display's width. "-0" means
-                      # start from the rightest side
-                      # (e.g. 10=: 10% from left, 010, 10 characters from left
-                      # (     -10=: 10% from right)
-                      # With %L>, %= above, screen tries to truncates the part 
-                      # in the left of "%L>"
-caption splitonly "$a"
-unsetenv a
-
-# hardstatus
-#hardstatus alwayslastline "%`%-w%{bw}%n %t %{-}%+w"
-#caption always '%?%F%{= gW}%:%{= Kk}%?%2n%f%07=%t%='
-#hardstatus alwayslastline "%{= kw}(%l) %{= .g}%H%{-} %m/%d %02c:%s"
-#caption always "%{= dd}%0`"
+# caption / hardstatus
 setenv a ""
 setenv a "$a%{= Kw}"    # {whtie(w) on bright black(K)}
 setenv a "$a%-w"        # windows' list up to the current window (shown as "%n %t")
@@ -69,5 +34,6 @@ setenv a "$a$HOSTNAME " # full hostname
 setenv a "$a%m/%d "     # date
 setenv a "$a%02c:%s "   # current time in 24h format 
 setenv a "$a%{-}"       # {remove}
-hardstatus alwayslastline "$a"
+#hardstatus alwayslastline "$a"
+caption always "$a"
 unsetenv a
