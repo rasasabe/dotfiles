@@ -44,3 +44,11 @@ let file_name = expand("%:p")
 if has('vim_starting') &&  file_name == ""
 	autocmd VimEnter * execute 'NERDTree ./'
 endif
+
+" +|`などを使ってツリー表示をするか
+" 0 : 綺麗に見せる
+" 1 : +|`などを使わない
+let g:NERDTreeDirArrows=0
+
+" 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
