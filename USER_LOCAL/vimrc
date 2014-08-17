@@ -34,6 +34,7 @@ call neobundle#end()
 
 " ファイル形式の判別を有効にする。
 filetype plugin indent on
+set runtimepath+=~/local/vim/ftdetect/
 
 " 未導入のプラグインをチェックする。
 NeoBundleCheck
