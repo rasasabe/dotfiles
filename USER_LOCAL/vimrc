@@ -6,6 +6,9 @@ scriptencoding utf-8
 " キーコードはすぐにタイムアウト、マッピングはタイムアウトしない。"O"を多用するので。
 set notimeout ttimeout ttimeoutlen=200
 
+" ステータス行を表示
+set laststatus=2
+
 " バックアップもスワップも作成しない。
 set nobackup
 set noswapfile
@@ -52,3 +55,12 @@ let g:NERDTreeDirArrows=0
 
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" vimrc読み直し用のキーマップ
+nnoremap <F8> :<C-u>source $MYVIMRC<CR>
+
+" Unite呼出用のキーマップ
+nnoremap [unite] <Nop>
+nmap <Space>e [unite]
+nnoremap [unite]b :<C-u>Unite buffer<CR>
+nnoremap [unite]f :<C-u>Unite file<CR>
