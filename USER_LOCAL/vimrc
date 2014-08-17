@@ -31,6 +31,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " NeoBundleで管理されいてるPluginを列挙。
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'The-NERD-tree'
 
 call neobundle#end()
@@ -64,3 +65,5 @@ nnoremap [unite] <Nop>
 nmap <Space>s [unite]
 nnoremap [unite]b :<C-u>Unite buffer<CR>
 nnoremap [unite]f :<C-u>Unite file<CR>
+nnoremap [unite]m :<C-u>Unite file_mru<CR>
+nnoremap [unite]r :<C-u>Unite file_rec<CR>
