@@ -21,6 +21,7 @@ set autoindent
 filetype off
 
 " NeoBundleを導入。
+" mkdir -p ~/local/vim/bundle/ && git clone https://github.com/Shougo/neobundle.vim ~/local/vim/bundle/neobundle.vim
 if has('vim_starting')
 	set runtimepath+=~/local/vim/bundle/neobundle.vim/
 	call neobundle#rc(expand('~/local/vim/bundle/'))
