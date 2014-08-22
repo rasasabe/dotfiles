@@ -3,4 +3,17 @@ set -o vi
 alias dir='ls -lF'
 alias ls='ls -F'
 
+export EDITOR=/usr/bin/vim
+alias view='$EDITOR -R'
+
+#set SSH_ASKPASS /usr/libexec/openssh/gnome-ssh-askpass
+unset SSH_ASKPASS
+export SSH_ASKPASS
+
 alias ssh-ignorekey='ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no'
+
+# anyenv
+if [ -d $HOME/.anyenv ] ; then
+	export PATH="$HOME/.anyenv/bin:$PATH"
+	eval "$(anyenv init -)"
+fi
