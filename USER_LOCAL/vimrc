@@ -6,9 +6,6 @@ scriptencoding utf-8
 " キーコードはすぐにタイムアウト、マッピングはタイムアウトしない。"O"を多用するので。
 set notimeout ttimeout ttimeoutlen=200
 
-" ステータス行を表示
-set laststatus=2
-
 " バックアップもスワップも作成しない。
 set nobackup
 set noswapfile
@@ -17,8 +14,9 @@ set noswapfile
 set tabstop=4
 set autoindent
 
-"フォーマット揃えをコメント以外有効にする
-set formatoptions-=c
+" Tab,EOL,EOFなどを可視化
+set list
+set listchars=tab:>\ ,extends:<,trail:-,eol:<
 
 " Esc連打で検索結果ハイライトを消す
 map  <Esc><Esc> :set hls!<CR>
@@ -33,6 +31,13 @@ if !has('gui_running')
 		autocmd VimEnter * map! <Nul> <C-Space>
 	augroup END
 endif
+
+"ステータスラインにコマンドを表示
+set showcmd
+
+" ステータス行を表示
+set laststatus=2
+
 
 " いったんフィある形式の判別を停止する。
 filetype off
@@ -86,3 +91,7 @@ nnoremap [unite]b :<C-u>Unite buffer<CR>
 nnoremap [unite]f :<C-u>Unite file<CR>
 nnoremap [unite]m :<C-u>Unite file_mru<CR>
 nnoremap [unite]r :<C-u>Unite file_rec<CR>
+
+" コメント文字の自動挿入を停止
+autocmd Filetype * set formatoptions-=o
+autocmd Filetype * set formatoptions-=r
