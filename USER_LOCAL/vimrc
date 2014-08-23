@@ -18,10 +18,13 @@ set autoindent
 set list
 set listchars=tab:>\ ,extends:<,trail:-,eol:<
 
-" Esc連打で検索結果ハイライトを消す
-map  <Esc><Esc> :set hls!<CR>
-imap <Esc><Esc> <Esc>:set hls!<CR>a
-vmap <Esc><Esc> <Esc>:set hls!<CR>gv
+" <F3>で検索結果ハイライトをトグル
+"map  <Esc><Esc> :set hls!<CR>
+"imap <Esc><Esc> <Esc>:set hls!<CR>a
+"vmap <Esc><Esc> <Esc>:set hls!<CR>gv
+map  <F3> :<C-u>:set hls!<CR>
+imap <F3> <Esc>:set hls!<CR>a
+vmap <F3> <Esc>:set hls!<CR>gv
 
 " <C-Space>に機能を割り当てるため、定義を変更
 if !has('gui_running')
