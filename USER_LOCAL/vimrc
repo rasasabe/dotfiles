@@ -37,7 +37,7 @@ set showcmd
 
 " ステータス行を表示
 set laststatus=2
-
+"source /home/kitamura/local/dotfiles/USER_LOCAL/vim/statusline.vim
 
 " いったんフィある形式の判別を停止する。
 filetype off
@@ -57,6 +57,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'itchyny/lightline.vim'
 
 call neobundle#end()
 
