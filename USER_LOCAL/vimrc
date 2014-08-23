@@ -17,6 +17,9 @@ set noswapfile
 set tabstop=4
 set autoindent
 
+"フォーマット揃えをコメント以外有効にする
+set formatoptions-=c
+
 " Esc連打で検索結果ハイライトを消す
 map  <Esc><Esc> :set hls!<CR>
 imap <Esc><Esc> <Esc>:set hls!<CR>a
