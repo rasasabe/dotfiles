@@ -16,7 +16,7 @@ set autoindent
 
 " Tab,EOL,EOFなどを可視化
 set list
-set listchars=tab:>\ ,extends:<,trail:-,eol:<
+set listchars=tab:>\ ,trail:-
 
 " <F3>で検索結果ハイライトをトグル
 "map  <Esc><Esc> :set hls!<CR>
