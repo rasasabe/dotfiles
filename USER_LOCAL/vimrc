@@ -26,6 +26,9 @@ map  <F3> :<C-u>:set hls!<CR>
 imap <F3> <Esc>:set hls!<CR>a
 vmap <F3> <Esc>:set hls!<CR>gv
 
+" 初期状態では検索結果ハイライトをoffにしておく
+set nohls
+
 " <C-Space>に機能を割り当てるため、定義を変更
 if !has('gui_running')
 	augroup term_vim_c_space
