@@ -19,6 +19,9 @@ set list
 set listchars=tab:>\ ,trail:-
 highlight SpecialKey term=underline ctermfg=cyan guifg=cyan
 
+" インクリメンタルサーチ
+set incsearch
+
 " <F3>で検索結果ハイライトをトグル
 "map  <Esc><Esc> :set hls!<CR>
 "imap <Esc><Esc> <Esc>:set hls!<CR>a
@@ -87,7 +90,19 @@ endif
 let g:NERDTreeDirArrows=0
 
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd BufEnter *
+  \   if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary")
+  \ |   q
+  \ | endif
+
+" 直前の検索パターンと'hlsearch'をバッファローカルにする
+" http://d.hatena.ne.jp/tyru/20140129/localize_search_options
+autocmd BufLeave *
+  \   let b:vimrc_pattern = @/
+  \ | let b:vimrc_hlsearch = &hlsearch
+autocmd BUfEnter *
+  \   let @/ = get(b:, 'vimrc_pattern', @/)
+  \ | let &l:hlsearch = get(b:, 'vimrc_hlsearch', &l:hlsearch)
 
 " vimrc読み直し用のキーマップ
 nnoremap <F8> :<C-u>source $MYVIMRC<CR>
