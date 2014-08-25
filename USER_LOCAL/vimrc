@@ -68,6 +68,8 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'JulesWang/css.vim'
+NeoBundle 'cakebaker/scss-syntax.vim'
 
 call neobundle#end()
 
