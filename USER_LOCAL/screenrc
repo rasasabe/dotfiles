@@ -35,6 +35,6 @@ setenv a "$a$HOSTNAME " # full hostname
 setenv a "$a%m/%d "     # date
 setenv a "$a%02c:%s "   # current time in 24h format 
 setenv a "$a%{-}"       # {remove}
-#hardstatus alwayslastline "$a"
-caption always "$a"
+hardstatus alwayslastline "$a"
+#caption always "$a"
 unsetenv a
