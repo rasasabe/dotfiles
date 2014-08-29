@@ -3,6 +3,8 @@ set encoding=utf-8
 scriptencoding utf-8
 " }}}
 
+set runtimepath+=~/local/vim/
+
 " キーコードはすぐにタイムアウト、マッピングはタイムアウトしない。"O"を多用するので。
 set notimeout ttimeout ttimeoutlen=200
 
@@ -47,7 +49,7 @@ set showcmd
 
 " ステータス行を表示
 set laststatus=2
-"source /home/kitamura/local/dotfiles/USER_LOCAL/vim/statusline.vim
+"source ~/local/dotfiles/USER_LOCAL/vim/statusline.vim
 
 " いったんフィある形式の判別を停止する。
 filetype off
@@ -75,7 +77,6 @@ call neobundle#end()
 
 " ファイル形式の判別を有効にする。
 filetype plugin indent on
-set runtimepath+=~/local/vim/ftdetect/
 
 " 未導入のプラグインをチェックする。
 NeoBundleCheck
