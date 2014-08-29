@@ -1,0 +1,13 @@
+# /etc/sysconfig/docker
+#
+# Other arguments to pass to the docker daemon process
+# These will be parsed by the sysv initscript and appended
+# to the arguments list passed to docker -d
+
+other_args="--exec-driver=lxc --selinux-enabled"
+
+export http_proxy=http://PROXY_USER:PROXY_PASSWORD@proxy.server.name:8080
+export ftp_proxy=http://PROXY_USER:PROXY_PASSWORD@proxy.server.name:8080
+export all_proxy=http://PROXY_USER:PROXY_PASSWORD@proxy.server.name:8080
+export https_proxy=http://PROXY_USER:PROXY_PASSWORD@proxy.server.name:8080
+export no_proxy=127.0.0.*,*localhost,*localdomain
