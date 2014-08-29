@@ -1,0 +1,1 @@
+diff -c main.erb better_errors-2.0.0,lib,better_errors,templates,main.erb > ../main.erb.patch

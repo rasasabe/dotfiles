@@ -1,0 +1,38 @@
+*** main.erb	2014-08-30 03:52:44.291704917 +0900
+--- better_errors-2.0.0,lib,better_errors,templates,main.erb	2014-08-30 03:32:37.322089410 +0900
+***************
+*** 397,402 ****
+--- 397,412 ----
+      pre, code, .repl input, .repl .prompt span, textarea, .code_linenums {
+          font-family: menlo, lucida console, monospace;
+          font-size: 8pt;
++         /* Customized by kitamura */
++         font-family: consolas, menlo, lucida console, monospace;
++         font-size: 10pt;
++         line-height: 130%; /* Original may be 150% */
++     }
++ 
++     /* Customized by kitamura */
++     .code_linenums {
++         text-align: right;
++         color: gray;
+      }
+  
+      /* ---------------------------------------------------------------------
+***************
+*** 577,582 ****
+--- 587,600 ----
+          padding: 0;
+          background: transparent;
+          margin: 0;
++         /* Customize by kitamura */
++         border: solid 1px #dddddd;
++         background-color: #f4f4ff;
++         height: 1.2em;
++         padding-left: 2px;
++         padding-bottom: 4px;
++         position: relative;
++         top: 6px;
+      }
+  
+      /* Hint text */
