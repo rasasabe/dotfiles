@@ -121,3 +121,6 @@ nnoremap [unite]r :<C-u>Unite file_rec<CR>
 " コメント文字の自動挿入を停止
 autocmd Filetype * set formatoptions-=o
 autocmd Filetype * set formatoptions-=r
+
+" 終了したことが識別しやすいように、少しスクロールさせる
+autocmd VimLeave * silent !echo -ne "\n\n"
