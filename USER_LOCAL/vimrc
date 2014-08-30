@@ -93,7 +93,12 @@ endif
 let g:NERDTreeDirArrows=0
 
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる
+"autocmd BufEnter *
+"  \   if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary")
+"  \ |   q
+"  \ | endif
 autocmd BufEnter *
+  \   nested
   \   if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary")
   \ |   q
   \ | endif
