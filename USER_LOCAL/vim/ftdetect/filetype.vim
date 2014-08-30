@@ -4,4 +4,6 @@ autocmd BufNewFile,BufRead .irbrc setfiletype ruby
 autocmd BufNewFile,BufRead irbrc setfiletype ruby
 autocmd BufNewFile,BufRead .pryrc setfiletype ruby
 
+autocmd BufNewFile,BufRead .eruby setfiletype eruby
+
 autocmd BufNewFile,BufRead *.scss setfiletype scss.css
