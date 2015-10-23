@@ -1,7 +1,10 @@
 set -o vi
 
-alias dir='ls -lF'
-alias ls='ls -F'
+eval $(dircolors ~/.colorrc)
+
+alias dir='ls -lF --color=auto'
+alias ls='ls -F --color=auto'
+
 
 export PATH="$HOME/bin:$PATH"
 
